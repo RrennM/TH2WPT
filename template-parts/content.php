@@ -37,7 +37,7 @@
 			<p><?php the_excerpt(); ?></p>
 			<h4>Written by <?php the_author(); ?>
 					|
-					<a href="<?php comments_link(); ?>"><?php comments_number( 'No Comments', '1 Comment', '% comments' ); ?></a></h4>
+				<a href="<?php comments_link(); ?>"><?php comments_number( 'No Comments', '1 Comment', '% comments' ); ?></a></h4>
 		</div> <!-- post-excerpt -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

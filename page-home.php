@@ -28,7 +28,7 @@ get_header(); ?>
 					<h2 class="title">Latest Post</h2>
 				</div>
 				<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-10 col-sm-offset-1">
 						<?php
 						$args = array( 'numberposts' => 1, 'post_status'=>"publish",'post_type'=>"post",'orderby'=>"post_date", 'order' => "DESC");
 						$postslist = get_posts( $args ); ?>

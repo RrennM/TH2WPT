@@ -280,6 +280,14 @@ th {
 ## Menus
 --------------------------------------------------------------*/
 
+.single-post #nav-links > li.current_page_item a,
+.single-post #nav-links > li.current_page_parent a
+.portfolio_item-template-default #nav-links > li.current_page_item a,
+.portfolio_item-template-default #nav-links > li.current_page_parent a {
+	background-color: rgba(255,255,255,0);
+	height: 79px;
+}
+
 #nav-links > li.current_page_item a,
 #nav-links > li.current_page_parent a {
 	background-color: rgba(255,255,255,0.1);
@@ -1114,13 +1122,45 @@ footer a:hover {
 	border-radius: 5px;
 	border: 1px solid #ccc;
 	min-height: 190px;
+	max-height: 200px;
 }
 
 
-/* === SHOW PAGE
+/* === PORTFOLIO SINGLE PAGE
 =============================================================*/
-#showcase .post header {
+#post .portfolio_item {
+	padding: 0 20px ;
+}
+
+#post .portfolio_item header {
+	color: #222;
 	font-size: 1em;
+}
+
+#post .portfolio_item .post-image {
+	/*max-width: 100%;*/
+}
+
+#post .portfolio_item .post-image img {
+	width: auto;
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#post .portfolio_item .highlight-wrap {
+	width: auto;
+	height: auto;
+	min-height: 100px;
+	max-width: 100%;
+}
+
+#post .portfolio_item ul {
+	list-style: none;
+}
+
+#post .col-sm-8 nav {
+	display: none;
 }
 
 #showcase .post-body .col-sm-4 {
@@ -1135,6 +1175,8 @@ footer a:hover {
 #showcase .post-body h3 {
 	clear: both;
 }
+
+
 
 
 /* === SERVICES PAGE
@@ -1192,7 +1234,7 @@ footer a:hover {
 /* === BLOG PAGE
 =============================================================*/
 
-.post, .widget, #comments {
+.post, .widget, #comments, #post .portfolio_item {
 	background-color: #fff;
 	margin: 0 0 40px;
 	border: 1px solid #ddd;
