@@ -85,16 +85,14 @@ get_header(); ?>
 					<?php $loop = new WP_Query( array( 'post_type' => 'cool_projects', 'orderby' => 'post_id', 'order' => 'ASC' ) ); 
 
 					while( $loop->have_posts() ) : $loop->the_post();  
-
-						$js_site_link			=	get_field( 'live_site_link' );
-						$js_about_project	=	get_field( 'about_project' );
+						$cool_site_link	=	get_field( 'cool_site_link' );
 
 					?>
 
 						<div class="col-sm-4">
 							<h3><?php the_title(); ?></h3>
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-							<a href="<?php echo $live_site_link ?>">Visit Site</a>
+							<h5><a href="<?php echo $cool_site_link ?>">Visit Site</a></h5>
 						</div> <!-- end col -->
 
 

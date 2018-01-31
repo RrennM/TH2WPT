@@ -36,18 +36,21 @@
 				<p><a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/TysonHood2W.png"></a></p>
 			</div> <!-- end col -->
 			<div class="col-sm-6">
-				<nav>
-					<ul class="list-unstyled list-inline">
-						<li><a href="about.html">About</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</nav>
+
+				<!-- if the menu (WP admin area) is not set, then the "menu-class" is applied to "container". In other words, it overwrites the "container_class". Ref: http://wordpress.org/support/topic/wp_nav_menu-men_class-usage_bug?replies=4 -->
+
+				<?php  
+					wp_nav_menu( array(
+
+						'theme_location' 		=> 'menu-2',
+						'container' 				=> 'nav',
+						'menu_class'				=> 'list-unstyled list-inline'
+
+					));
+				?>
 			</div> <!-- end col -->
 			<div class="col-sm-3">
-				&copy; 2018 Tyson Hood
+				&copy; <?php echo date( 'Y' ); ?> <?php the_author(); ?>
 			</div> <!-- end col -->
 		</div> <!-- .container -->
 	</footer>

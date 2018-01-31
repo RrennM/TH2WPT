@@ -66,7 +66,7 @@
 ?>
 
 			<div class="post-title">
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h2><?php the_title(); ?></h2>
 
 				<?php if ( 'portfolio_item' === get_post_type() ) : ?>
 
@@ -120,6 +120,41 @@
 		<h3>About Project</h3>
 		<p><?php echo $about_project ?></p>
 	</div> <!-- post-excerpt -->
+
+
+	<!-- IF PORTFOLIO ITEM
+	=============================================================================== -->
+	<?php elseif ( 'cool_projects' === get_post_type() ) : ?>
+
+		<?php 
+			$cool_site_link	=	get_field( 'cool_site_link' );
+			$about_cool_project	=	get_field( 'about_cool_project' );
+		?>
+
+			<div class="post-title">
+				<h2><?php the_title(); ?></h2>
+
+					<div class="post-details">
+						<i class="fa fa-plane"></i> <a href="<?php echo $cool_site_link ?>">Visit the live site</a>
+					</div> <!-- .post-details -->
+
+			</div> <!-- .post-title -->
+		</header><!-- .entry-header -->
+
+
+
+		<?php if(has_post_thumbnail() ) { // Check for post thumbnail ?>
+			<div class="post-image">
+				<?php the_post_thumbnail(); ?>
+			</div> <!-- post-image -->
+		<?php } ?>
+
+
+
+		<div class="post-body">
+			<h3>About Project</h3>
+			<p><?php echo $about_cool_project ?></p>
+		</div> <!-- post-excerpt -->
 
 
 		<?php

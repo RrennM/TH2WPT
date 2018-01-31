@@ -1126,22 +1126,21 @@ footer a:hover {
 }
 
 
-/* === PORTFOLIO SINGLE PAGE
+/* === PORTFOLIO SINGLE / COOL PROJECTS PAGES
 =============================================================*/
-#post .portfolio_item {
+#post .portfolio_item,
+#post .cool_projects {
 	padding: 0 20px ;
 }
 
-#post .portfolio_item header {
+#post .portfolio_item header,
+#post .cool_projects header {
 	color: #222;
 	font-size: 1em;
 }
 
-#post .portfolio_item .post-image {
-	/*max-width: 100%;*/
-}
-
-#post .portfolio_item .post-image img {
+#post .portfolio_item .post-image img,
+#post .cool_projects .post-image img {
 	width: auto;
 	height: auto;
 	max-height: 100%;
@@ -1163,16 +1162,16 @@ footer a:hover {
 	display: none;
 }
 
-#showcase .post-body .col-sm-4 {
+.post-body .col-sm-4 {
 	margin: 0 0 20px;
 }
 
-#showcase .post-body .col-sm-4 ul {
+.post-body .col-sm-4 ul {
 	list-style: none;
 	padding: 0;
 }
 
-#showcase .post-body h3 {
+.post-body h3 {
 	clear: both;
 }
 
@@ -1234,7 +1233,11 @@ footer a:hover {
 /* === BLOG PAGE
 =============================================================*/
 
-.post, .widget, #comments, #post .portfolio_item {
+.post, 
+.widget, 
+#comments, 
+#post .portfolio_item,
+#post .cool_projects {
 	background-color: #fff;
 	margin: 0 0 40px;
 	border: 1px solid #ddd;
@@ -1327,6 +1330,7 @@ footer a:hover {
 .widget h3 {
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 8px;
+	font-weight: 400 !important;
 }
 
 .widget input {
@@ -1445,6 +1449,25 @@ footer a:hover {
 }
 
 
+/* === 404 PAGE
+=============================================================*/
+#primary .error-404 {
+text-align: center;
+}
+
+#primary .error-404 h1 {
+	color: #222;
+}
+
+#primary img {
+	max-width: 100%;
+}
+
+.error404 #nav-links li a,
+.single-cool_projects #nav-links li a {
+	background-color: rgba(0,0,0,0); 
+}
+
 
 /* === FORMS
 =============================================================*/
@@ -1511,23 +1534,33 @@ button[type="submit"]:hover {
 @media screen and ( max-width: 991px ) {
 
 	/*Main Nav Fix*/
-	 #navbar .container {
+	#navbar .container {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 	}
 
-	 #navbar .navbar-brand img {
+	#navbar .navbar-brand img {
 		width: 280px;
 	}
 
-	 #hero #motto {
+	#hero #motto {
 		bottom: 18%;
 	}
 
+	/*About images*/
+	.story-image img {
+		max-height: 220px;
+	}
+
 	/*portfolio fix*/
-	.gallery img {
-		min-height: auto;
+	#primary .gallery img {
+		width: auto;
+		height: auto;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		min-height: 0;
+		max-height: 170px;
 	}
 
 	/*sidebar button fix*/
@@ -1628,6 +1661,12 @@ button[type="submit"]:hover {
 
 	footer .container .list-inline li {
 		display: block ;
+	}
+
+	/*About images*/
+	.story-image img {
+		height: auto;
+		max-height: 550px;
 	}
 
 	/*contact page fix*/

@@ -45,6 +45,7 @@ if ( ! function_exists( 'tysonhood2_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'tysonhood2' ),
+			'menu-2' => esc_html__( 'Footer', 'tysonhood2' ),
 		) );
 
 		/*
@@ -104,6 +105,16 @@ function tysonhood2_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'tysonhood2' ),
 		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'tysonhood2' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar 2', 'tysonhood2' ),
+		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Add widgets here.', 'tysonhood2' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
