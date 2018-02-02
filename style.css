@@ -834,7 +834,6 @@ header {
 	height: 150px;
 	width: 100%;
 	font-family: 'Vollkorn', serif;
-	margin-top: 26px;
 
   /* animation magic */
   position: fixed;
@@ -843,6 +842,10 @@ header {
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   z-index: 9999;
+}
+
+.logged-in #navbar {
+	margin-top: 26px;
 }
 
 .nav.navbar-nav.navbar-right {
@@ -910,7 +913,7 @@ header {
 
 #about p {
 	font-size: 1.4em;
-	line-height: 1.6
+	line-height: 1.6;
 }
 
 #about p span {
@@ -1394,7 +1397,7 @@ footer a:hover {
 }
 
 #comments input[type="submit"] {
-	width: 30%;
+	width: 130px;
 	margin: 0 auto;
 }
 
@@ -1641,6 +1644,11 @@ button[type="submit"]:hover {
 
 	.alt-page #nav-links li.active a {
 		background-color: rgba(0,0,0,0); 
+	}
+
+	/*Title text fix*/
+	.feature-image .page-title h1 {
+		font-size: 1.4em;
 	}
 
 	/*about me social icon fix*/

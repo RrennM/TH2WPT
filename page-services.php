@@ -49,7 +49,7 @@ get_header(); ?>
 				<h2><?php echo $body_title ?></h2>
 				<p><?php echo $body_desc ?></p>
 				<div class="button-wrap">
-					<a href="contact.html" class="btn btn-lg btn-success"><?php echo $body_button_text ?></a>
+					<a href="//localhost/tysonhood2wp/contact/" class="btn btn-lg btn-success"><?php echo $body_button_text ?></a>
 				</div>
 			</div> <!-- end col -->
 		</div> <!-- .row -->

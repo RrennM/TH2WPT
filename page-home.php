@@ -39,7 +39,7 @@ get_header(); ?>
 								<a href="<?php the_permalink(); ?>" id="title"><h2><?php the_title();?></h2></a>
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( ) ?></a>
 								<p><?php the_excerpt();?></p>
-								<a href="http://localhost/tysonhood2wp/blog/" class="btn btn-success btn-md">View All Posts</a>
+								<a href="http://tysonhood.com/blog/" class="btn btn-success btn-md">View All Posts</a>
 		            </li>
 		    			<?php endforeach; ?>
             </ul>
